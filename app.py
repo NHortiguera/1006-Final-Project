@@ -1,9 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 21 14:57:17 2020
-
-@author: etill
-"""
+#######################
+# Name: Nicolas Hortiguera
+# Uni: nh2648
+# Assignment: Final
+# 
+# This module contains functions to run a server on the local host using Flask.
+#######################
 
 #import statements
 from flask import Flask, render_template
@@ -16,10 +17,12 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
+#route to classes page
 @app.route("/classes")
 def classes():
     return render_template("classes.html")
 
+#route to assignments page
 @app.route("/assignments")
 def assignments():
     return render_template("assignments.html")
